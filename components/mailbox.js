@@ -5,11 +5,11 @@ export default function MailBox(props) {
     return (
         <div>
             <strong>
-                {props.inbox}
+                <h1>{props.inbox}</h1>
             </strong>
-            <br>
+            <br></br>
             <strong>
-                {props.spam}
+                <h1>{props.spam}</h1>
             </strong>
         </div>
     );

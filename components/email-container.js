@@ -1,8 +1,8 @@
 import React from 'react';
-import CONTACTS from '../contacts';
-import Contact from './contact';
+import EMAILS from '../emails';
+import MailBox from './mailbox';
 
-export default function ContactContainer(props) {
-    const contact = CONTACTS[props.params.contactId];
-    return <Contact id={contact.id} name={contact.name} phoneNumber={contact.phoneNumber} />;
+export default function EmailContainer(props) {
+    const email = EMAILS[props.params.inboxOrSpam];
+    return <MailBox inbox={email.inbox} spam={email.spam} />;
 };

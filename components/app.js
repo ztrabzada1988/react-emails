@@ -4,7 +4,7 @@ export default function App(props) {
     return (
         <div>
             <h1>
-                Contacts App
+                Emails App
             </h1>
             <div>
                 {props.children}
