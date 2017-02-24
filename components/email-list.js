@@ -1,14 +1,14 @@
 import React from 'react';
 import MailBox from './mailbox';
-import EMAILS from '../emails';
+
 
 export default function EmailList(props) {
-    const emails = Object.keys(EMAILS).map(function(inboxOrSpam, index) {
+    const emails = Object.keys(props.emails).map(function(inboxOrSpam, index) {
         const email = props.emails[inboxOrSpam];
         console.log(email);
         return (
             <li key={index}>
-                <MailBox inbox={EMAILS[inboxOrSpam]} spam={email.spam} />
+                <MailBox inbox={email.inbox} spam={email.spam} />
             </li>
         );
     });
