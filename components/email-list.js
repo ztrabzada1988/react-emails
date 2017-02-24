@@ -1,19 +1,19 @@
 import React from 'react';
-import Contact from './contact';
+import MailBox from './mailbox';
 
-export default function ContactList(props) {
-    const contacts = Object.keys(props.contacts).map(function(contactId, index) {
-        const contact = props.contacts[contactId];
+export default function EmailList(props) {
+    const emails = Object.keys(props.emails).map(function(inboxOrSpam, index) {
+        const email = props.emails[inboxOrSpam];
         return (
             <li key={index}>
-                <Contact id={contact.id} name={contact.name}
-                         phoneNumber={contact.phoneNumber} />
+                <MailBox inbox={email.inbox} spam={email.name} />
             </li>
         );
     });
+
     return (
         <ul>
-            {contacts}
+            {emails}
         </ul>
     );
 };
